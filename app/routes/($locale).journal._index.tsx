@@ -11,6 +11,10 @@ import {getStorefrontClient} from '~/lib/storefrontClient';
 
 const BLOG_HANDLE = 'Journal';
 
+export const config = {
+  runtime: 'edge',
+};
+
 export const headers = routeHeaders;
 
 export const loader = async ({request}: LoaderArgs) => {

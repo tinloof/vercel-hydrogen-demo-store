@@ -5,6 +5,10 @@ import invariant from 'tiny-invariant';
 import {Button, PageHeader} from '~/components';
 import {getStorefrontClient} from '~/lib/storefrontClient';
 
+export const config = {
+  runtime: 'edge',
+};
+
 /*
  If your online store had active orders before you launched your Hydrogen storefront,
  and the Hydrogen storefront uses the same domain formerly used by the online store,

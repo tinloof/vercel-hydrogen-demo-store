@@ -6,6 +6,10 @@ import invariant from 'tiny-invariant';
 import {PRODUCT_CARD_FRAGMENT} from '~/data/fragments';
 import {getStorefrontClient} from '~/lib/storefrontClient';
 
+export const config = {
+  runtime: 'edge',
+};
+
 /**
  * Fetch a given set of products from the storefront API
  * @param count

@@ -7,6 +7,10 @@ import {getInputStyleClasses} from '~/lib/utils';
 import {getStorefrontClient} from '~/lib/storefrontClient';
 import {commitSession, getSession} from '~/lib/session';
 
+export const config = {
+  runtime: 'edge',
+};
+
 type ActionData = {
   formError?: string;
 };

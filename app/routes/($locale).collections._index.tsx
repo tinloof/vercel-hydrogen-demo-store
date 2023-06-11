@@ -16,6 +16,10 @@ import {seoPayload} from '~/lib/seo.server';
 import {CACHE_SHORT, routeHeaders} from '~/data/cache';
 import {getStorefrontClient} from '~/lib/storefrontClient';
 
+export const config = {
+  runtime: 'edge',
+};
+
 const PAGINATION_SIZE = 4;
 
 export const headers = routeHeaders;

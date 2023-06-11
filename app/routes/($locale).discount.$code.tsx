@@ -5,6 +5,10 @@ import {getStorefrontClient} from '~/lib/storefrontClient';
 
 import {cartCreate, cartDiscountCodesUpdate} from './($locale).cart';
 
+export const config = {
+  runtime: 'edge',
+};
+
 /**
  * Automatically applies a discount found on the url
  * If a cart exists it's updated with the discount, otherwise a cart is created with the discount already applied

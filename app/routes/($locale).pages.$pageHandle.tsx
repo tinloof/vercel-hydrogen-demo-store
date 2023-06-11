@@ -8,6 +8,10 @@ import {CACHE_LONG, routeHeaders} from '~/data/cache';
 import {seoPayload} from '~/lib/seo.server';
 import {getStorefrontClient} from '~/lib/storefrontClient';
 
+export const config = {
+  runtime: 'edge',
+};
+
 export const headers = routeHeaders;
 
 export async function loader({request, params}: LoaderArgs) {

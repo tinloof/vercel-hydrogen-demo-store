@@ -11,6 +11,10 @@ type ActionData = {
   formError?: string;
 };
 
+export const config = {
+  runtime: 'edge',
+};
+
 const badRequest = (data: ActionData) => json(data, {status: 400});
 
 export const handle = {

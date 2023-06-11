@@ -39,6 +39,10 @@ import {doLogout} from './($locale).account.logout';
 // types returned by useLoaderData. This is a temporary fix.
 type TmpRemixFix = ReturnType<typeof defer<{isAuthenticated: false}>>;
 
+export const config = {
+  runtime: 'edge',
+};
+
 export const headers = routeHeaders;
 
 export async function loader({request, params}: LoaderArgs) {

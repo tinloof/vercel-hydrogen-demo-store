@@ -16,6 +16,10 @@ import {seoPayload} from '~/lib/seo.server';
 import type {AppliedFilter, SortParam} from '~/components/SortFilter';
 import {getStorefrontClient} from '~/lib/storefrontClient';
 
+export const config = {
+  runtime: 'edge',
+};
+
 export const headers = routeHeaders;
 
 const PAGINATION_SIZE = 48;

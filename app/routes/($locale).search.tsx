@@ -31,6 +31,10 @@ import {getImageLoadingPriority} from '~/lib/const';
 import {seoPayload} from '~/lib/seo.server';
 import {getStorefrontClient} from '~/lib/storefrontClient';
 
+export const config = {
+  runtime: 'edge',
+};
+
 export async function loader({request}: LoaderArgs) {
   const searchParams = new URL(request.url).searchParams;
   const searchTerm = searchParams.get('q')!;

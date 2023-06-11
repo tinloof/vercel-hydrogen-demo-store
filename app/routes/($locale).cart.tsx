@@ -19,6 +19,10 @@ import {CartAction, type CartActions} from '~/lib/type';
 import {getStorefrontClient} from '~/lib/storefrontClient';
 import {commitSession, getSession} from '~/lib/session';
 
+export const config = {
+  runtime: 'edge',
+};
+
 export async function action({request}: ActionArgs) {
   const storefrontClient = getStorefrontClient(request);
   const headers = new Headers();

@@ -24,6 +24,10 @@ interface HomeSeoData {
 
 export const headers = routeHeaders;
 
+export const config = {
+  runtime: 'edge',
+};
+
 export async function loader({params, request}: LoaderArgs) {
   const storefrontClient = getStorefrontClient(request);
   const {language, country} = storefrontClient.i18n;

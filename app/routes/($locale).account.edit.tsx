@@ -24,6 +24,10 @@ export interface AccountOutletContext {
   customer: Customer;
 }
 
+export const config = {
+  runtime: 'edge',
+};
+
 export interface ActionData {
   success?: boolean;
   formError?: string;

@@ -8,6 +8,10 @@ import {
 import {getSession, commitSession} from '~/lib/session';
 import {getStorefrontClient} from '~/lib/storefrontClient';
 
+export const config = {
+  runtime: 'edge',
+};
+
 export async function doLogout(request: Request) {
   const storefrontClient = getStorefrontClient(request);
   const session = await getSession(request.headers.get('Cookie'));

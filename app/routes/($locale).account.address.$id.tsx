@@ -33,6 +33,10 @@ export const handle = {
   renderInModal: true,
 };
 
+export const config = {
+  runtime: 'edge',
+};
+
 export const action: ActionFunction = async ({request, params}) => {
   const storefrontClient = getStorefrontClient(request);
   const [formData, session] = await Promise.all([

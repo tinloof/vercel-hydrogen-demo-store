@@ -13,6 +13,10 @@ import styles from '../styles/custom-font.css';
 
 const BLOG_HANDLE = 'journal';
 
+export const config = {
+  runtime: 'edge',
+};
+
 export const headers = routeHeaders;
 
 export const links: LinksFunction = () => {

@@ -14,6 +14,10 @@ import {Link, Heading, PageHeader, Text} from '~/components';
 import {getSession} from '~/lib/session';
 import {getStorefrontClient} from '~/lib/storefrontClient';
 
+export const config = {
+  runtime: 'edge',
+};
+
 export const meta: V2_MetaFunction<typeof loader> = ({data}) => {
   return [{title: `Order ${data?.order?.name}`}];
 };

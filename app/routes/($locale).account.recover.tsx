@@ -13,6 +13,10 @@ import {getInputStyleClasses} from '~/lib/utils';
 import {getSession} from '~/lib/session';
 import {getStorefrontClient} from '~/lib/storefrontClient';
 
+export const config = {
+  runtime: 'edge',
+};
+
 export async function loader({request, params}: LoaderArgs) {
   const session = await getSession(request.headers.get('Cookie'));
   const customerAccessToken = session.get('customerAccessToken');

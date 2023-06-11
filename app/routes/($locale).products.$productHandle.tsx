@@ -41,6 +41,10 @@ import type {Storefront} from '~/lib/type';
 import {routeHeaders, CACHE_SHORT} from '~/data/cache';
 import {getStorefrontClient} from '~/lib/storefrontClient';
 
+export const config = {
+  runtime: 'edge',
+};
+
 export const headers = routeHeaders;
 
 export async function loader({params, request}: LoaderArgs) {
