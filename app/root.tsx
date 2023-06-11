@@ -48,7 +48,6 @@ export async function loader({request}: LoaderArgs) {
   const storefrontClient = getStorefrontClient(request);
   const customerAccessToken = session.get('customerAccessToken');
   const layout = await getLayoutData(request);
-  console.debug({shopId: layout.shop.id, cartId});
 
   const seo = seoPayload.root({shop: layout.shop, url: request.url});
 
