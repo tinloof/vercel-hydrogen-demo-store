@@ -15,11 +15,12 @@ import type {I18nLocale} from '../lib/type';
 import {CartAction} from '../lib/type';
 
 export function useAnalytics(hasUserConsent: boolean, locale: I18nLocale) {
-  useShopifyCookies({hasUserConsent});
-  const location = useLocation();
-  const analyticsFromMatches = useDataFromMatches(
+  const {domain, ...analyticsFromMatches} = useDataFromMatches(
     'analytics',
-  ) as unknown as ShopifyPageViewPayload;
+  ) as unknown as ShopifyPageViewPayload & {domain: string};
+
+  useShopifyCookies({hasUserConsent, domain});
+  const location = useLocation();
 
   const pageAnalytics = {
     ...analyticsFromMatches,

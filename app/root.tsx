@@ -59,6 +59,7 @@ export async function loader({request}: LoaderArgs) {
     analytics: {
       shopifySalesChannel: ShopifySalesChannel.hydrogen,
       shopId: layout.shop.id,
+      domain: process.env.PUBLIC_STORE_ANALYTICS_DOMAIN,
     },
     seo,
   });
