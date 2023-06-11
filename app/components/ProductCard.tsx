@@ -48,7 +48,7 @@ export function ProductCard({
     name: product.title,
     variantName: firstVariant.title,
     brand: product.vendor,
-    price: firstVariant.price.amount,
+    price: parseFloat(firstVariant.price.amount),
     quantity: 1,
   };
 

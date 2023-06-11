@@ -81,7 +81,7 @@ export async function loader({params, request}: LoaderArgs) {
     name: product.title,
     variantName: selectedVariant.title,
     brand: product.vendor,
-    price: selectedVariant.price.amount,
+    price: parseFloat(selectedVariant.price.amount),
   };
 
   const seo = seoPayload.product({
