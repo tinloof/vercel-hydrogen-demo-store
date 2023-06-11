@@ -8,7 +8,7 @@
 <strong>Vercel Hydrogen Demo Store</strong>
 </p>
 
-A clone of [Hydrogen's official demo store temmplate](https://github.com/Shopify/hydrogen/tree/2023-04/templates/demo-store) adapted to be deployable on [Vercel Edge](https://vercel.com/features/edge-functions).
+A clone of [Hydrogen's official demo store template](https://github.com/Shopify/hydrogen/tree/2023-04/templates/demo-store) adapted to be deployable on [Vercel Edge](https://vercel.com/features/edge-functions).
 
 ## Getting started
 > Remember to update `.env` with your shop's domain and Storefront API token!
