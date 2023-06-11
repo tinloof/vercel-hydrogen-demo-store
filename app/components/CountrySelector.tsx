@@ -1,6 +1,5 @@
 import {useFetcher, useLocation, useMatches} from '@remix-run/react';
 import {useCallback, useEffect, useRef} from 'react';
-import {useInView} from 'react-intersection-observer';
 import clsx from 'clsx';
 import type {CartBuyerIdentityInput} from '@shopify/hydrogen/storefront-api-types';
 
@@ -8,6 +7,7 @@ import {Heading, Button, IconCheck} from '~/components';
 import type {Localizations, Locale} from '~/lib/type';
 import {CartAction} from '~/lib/type';
 import {DEFAULT_LOCALE} from '~/lib/utils';
+import useInView from '~/hooks/useInView';
 
 export function CountrySelector() {
   const [root] = useMatches();
@@ -26,15 +26,9 @@ export function CountrySelector() {
     ? `${defaultLocale?.language}-${defaultLocale?.country}`
     : '';
 
-  const {ref, inView} = useInView({
+  const {observerRef, inView} = useInView({
     threshold: 0,
-    triggerOnce: true,
   });
-
-  const observerRef = useRef(null);
-  useEffect(() => {
-    ref(observerRef.current);
-  }, [ref, observerRef]);
 
   // Get available countries list when in view
   useEffect(() => {
